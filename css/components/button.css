@@ -1,0 +1,77 @@
+/* Default (secondary) button */
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  min-width: 126px;
+  border: 2px solid var(--black);
+  font: var(--body-sm);
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.btn:after {
+  width: calc(100% + 2px);
+  top: calc(100% + 2px);
+}
+
+.btn:after {
+  content: "";
+  border-top: 4px solid #000;
+  box-sizing: border-box;
+  border-left: 8px solid rgba(0, 0, 0, 0);
+  border-right: 8px solid rgba(0, 0, 0, 0);
+  display: block;
+  position: absolute;
+}
+
+.white {
+  background: var(--white);
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.16);
+}
+
+/* Primary button */
+.btn.primary {
+  background: var(--medium-blue);
+  border: 0;
+}
+
+.btn.primary:hover {
+  background: var(--light-blue);
+}
+
+/* Highlight button */
+.btn.highlight {
+  background: var(--dark-yellow);
+  max-width: 448px;
+  width: 100%;
+  padding: 0.5em;
+  border: 0;
+}
+
+.btn.highlight:hover {
+  background: var(--light-yellow);
+}
+
+.btn.primary:after,
+.btn.highlight:after {
+  width: 100%;
+  top: 100%;
+}
+
+/* Arrow */
+.btn-arrow {
+  margin-left: 8px;
+}
+
+/* Logo buttons */
+.logo-btn {
+  width: 257px;
+}

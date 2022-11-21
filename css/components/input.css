@@ -1,0 +1,44 @@
+input,
+select {
+  border: 2px solid var(--black);
+  box-shadow: inset 4px 4px 0px #eefbfb;
+  padding: 12px;
+  cursor: pointer;
+}
+
+option {
+  font: var(--body-sm);
+  color: var(--medium-gray);
+}
+
+/* For password inputs */
+.inputfield {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inputfield-icon {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../../assets/icons/hidepassword.svg) no-repeat;
+  background-size: 16px 10px;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.field:is(:focus-within, :active) .inputfield-icon {
+  display: block;
+}
+
+.hide-pass {
+  background: url(../../assets/icons/showpassword.svg) no-repeat;
+  background-size: 18px 14px;
+  background-position: top 5px right 4px;
+  right: calc(1rem - 1px);
+}

@@ -1,0 +1,92 @@
+#opportunities-form {
+  max-width: 496px;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-content: center;
+  align-items: stretch;
+  z-index: 3;
+  background-color: white;
+  padding: 40px 24px;
+  box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
+  border-radius: 2px;
+  margin-bottom: -500px;
+}
+
+#opportunities-form h4,
+.message {
+  text-align: center;
+}
+
+#opportunities-form h4 {
+  font: var(--heading-xs-desk);
+  color: var(--darker-gray);
+}
+
+#opportunities-form .message {
+  font: var(--subtitle-xs);
+  color: var(--dark-gray);
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 24px;
+}
+
+#opportunities-form div {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#form-details {
+  padding: .5rem 1.5rem;
+  font: 400 12px/18px "Nunito Sans", sans-serif;
+  color: var(--dark-gray);
+}
+
+#form-details li a {
+  color: var(--medium-blue);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  cursor: pointer;
+}
+
+.fieldlabel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  line-height: 1.4;
+  gap: .5rem;
+}
+
+.fieldlabel-text {
+  white-space: nowrap;
+  color: var(--black);
+  font: var(--body-md);
+}
+
+.fieldlabel-error {
+  text-align: right;
+  font: var(--subtitle-xs);
+  color: var(--dark-gray);
+}
+
+@media (max-width: 1140px) {
+  #opportunities-form {
+    margin-bottom: 3rem;
+  }
+
+  #opportunities-form h4 {
+    font: var(--heading-xs-mob);
+  }
+}

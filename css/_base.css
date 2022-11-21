@@ -1,0 +1,56 @@
+:root {
+  --container-width: 1224px;
+  /** Colors **/
+  --dark-blue: #0b485b;
+  --medium-blue: #19c1ce;
+  --light-blue: #07e5eb;
+  --dark-yellow: #f2bf4e;
+  --light-yellow: #f4ca6d;
+  --black: #000000;
+  --darker-gray: #212429;
+  --dark-gray: #7e8a98;
+  --medium-gray: #97a1ac;
+  --gray: #cfd3d8;
+  --light-gray: #f1f3f5;
+  --white: ##ffffff;
+
+  /** Fonts **/
+  --heading-lg-desk: 900 56px/100% "Darker Grotesque", sans-serif;
+  --heading-lg-mob: 900 40px/100% "Darker Grotesque", sans-serif;
+  --heading-md-desk: 900 40px/100% "Darker Grotesque", sans-serif;
+  --heading-md-mob: 900 32px/100% "Darker Grotesque", sans-serif;
+  --heading-sm-desk: 900 32px/110% "Darker Grotesque", sans-serif;
+  --heading-sm-mob: 900 24px/110% "Darker Grotesque", sans-serif;
+  --heading-xs-desk: 800 24px/110% "Darker Grotesque", sans-serif;
+  --heading-xs-mob: 800 20px/110% "Darker Grotesque", sans-serif;
+  --subtitle-sm-desk: 400 20px/140% "Nunito Sans", sans-serif;
+  --subtitle-sm: 400 16px/140% "Nunito Sans", sans-serif;
+  --subtitle-xs: 400 14px/120% "Nunito Sans", sans-serif;
+  --body-lg: 700 20px/150% "Nunito Sans", sans-serif;
+  --body-md: 700 16px/150% "Nunito Sans", sans-serif;
+  --body-sm: 700 14px/150% "Nunito Sans", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+button,
+a {
+  cursor: pointer;
+}
+
+button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove eye icon from MS Edge & IE */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}

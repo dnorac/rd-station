@@ -1,0 +1,108 @@
+/* Cards Container */
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  margin-top: 64px;
+  margin-inline: auto;
+  max-width: calc(var(--container-width) + 4rem);
+  padding-inline: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
+  border-radius: 2px;
+  position: relative;
+  transition: all .3s;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-5%) scale(1.05);
+  z-index: 1;
+  box-shadow: 0px 11px 26px rgb(33 36 41 / 29%);
+}
+
+.card h4 {
+  font: var(--heading-sm-desk);
+  margin-block: 16px;
+}
+
+.card p {
+  font: var(--subtitle-sm);
+}
+
+.card figure {
+  background-color: var(--light-gray);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* colocar hover */
+}
+
+.navigation-auto {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  #cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 0;
+    margin-inline: 108px;
+    height: 460px;
+    align-items: center;
+    max-width: none;
+  }
+
+  .slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(55em);
+  }
+
+  .card {
+    width: 328px;
+    height: 435px;
+  }
+
+  .card>h4 {
+    font: var(--heading-sm-mob);
+  }
+
+  .navigation-auto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-block: 36px 52px;
+  }
+
+  .navigation-auto>button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--gray);
+    margin-right: 24px;
+    background-color: white;
+  }
+
+  .auto-btn6 {
+    margin-left: 0;
+  }
+
+  .background-btn {
+    background-color: var(--medium-blue) !important;
+  }
+}

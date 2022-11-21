@@ -1,0 +1,46 @@
+.radio {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  white-space: nowrap;
+  color: var(--black);
+  font: var(--body-md);
+}
+
+.radio .checkmark {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+  margin-right: 8px;
+  transition: .3s;
+}
+
+.radio:focus-within .checkmark {
+  box-shadow: 0 0 0 3px rgba(25, 194, 206, 0.206);
+}
+
+.radio input {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.radio input:checked~.checkmark {
+  border: 5px solid var(--medium-blue);
+  background: var(--darker-gray);
+  width: 19px;
+  height: 19px;
+}

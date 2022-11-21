@@ -1,0 +1,11 @@
+#hamburger-button {
+  display: none;
+  border: 0;
+  background: none;
+}
+
+@media (max-width: 1140px) {
+  #hamburger-button {
+    display: block;
+  }
+}

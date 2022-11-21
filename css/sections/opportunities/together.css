@@ -1,0 +1,68 @@
+#together {
+  background: var(--dark-blue) no-repeat;
+  background-position: 0%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row: 2;
+  padding: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#together:before {
+  content: '';
+  display: block;
+
+  background: #F1F3F5;
+  width: min(15%, 100px);
+  height: min(15%, 100px);
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(1.8);
+
+  position: absolute;
+}
+
+#together-text p,
+#together-text h3,
+#together-text p mark {
+  color: white;
+}
+
+#together-text h3 {
+  font: var(--heading-sm-desk);
+}
+
+#together-text p {
+  font: var(--subtitle-sm);
+  margin-top: 24px;
+}
+
+#together-text {
+  width: 50%;
+}
+
+#together-text p mark {
+  background: none;
+  font: var(--body-md);
+}
+
+@media (max-width: 1140px) {
+  #together {
+    margin-top: 40px;
+    padding: 5rem 0rem 2rem;
+  }
+
+  #together-text {
+    margin: 0;
+    width: 100%;
+  }
+
+  #together-text h3 {
+    font: var(--heading-sm-mob);
+    max-width: 80%;
+  }
+}

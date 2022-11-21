@@ -1,0 +1,229 @@
+/* nav-links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  flex: 1;
+  background: white;
+}
+
+/* Nav list */
+.nav-list {
+  flex: 1;
+  justify-content: space-between;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  gap: 3rem;
+  margin-right: 3rem;
+}
+
+.nav-list>li {
+  color: var(--darker-gray);
+  font: var(--body-md);
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: var(--darker-gray);
+  display: flex;
+}
+
+.nav-list li:hover,
+.nav-list li a:hover {
+  color: var(--dark-gray);
+  cursor: pointer;
+}
+
+.nav-list li a img {
+  margin-left: 8px;
+}
+
+/* Not used by css */
+/* Used by index.js */
+.dropdown-click {
+  position: relative;
+}
+
+/* Dropdown menu */
+#dropdown-menu {
+  opacity: 0;
+  display: none;
+  top: 40px;
+  cursor: default;
+}
+
+#dropdown-menu * {
+  box-sizing: border-box;
+}
+
+.menu-open {
+  background-color: white;
+  display: flex !important;
+  gap: 2rem;
+  opacity: 1 !important;
+  width: max-content;
+  height: auto;
+  z-index: 4;
+  position: absolute;
+  padding: 24px;
+  box-shadow: 0px 8px 18px rgba(33, 36, 41, 0.16);
+  border-radius: 2px;
+}
+
+/* Options container */
+.options-container h4 {
+  color: var(--medium-blue);
+  font: 800 18px/110% "Darker Grotesque", sans-serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 16px;
+}
+
+.options-container ul li {
+  list-style-type: none;
+  padding-top: 16px;
+  cursor: pointer;
+}
+
+.options-container ul li a {
+  color: var(--darker-gray);
+  text-decoration: none;
+  list-style-type: none;
+  font: var(--subtitle-xs);
+}
+
+.options-container ul li a:hover {
+  color: var(--dark-gray);
+}
+
+/* Btns Mobile */
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  .nav-links {
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+
+  .nav-links--visible {
+    display: flex;
+  }
+
+  .nav-list {
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .nav-links,
+  .nav-list {
+    width: 100%;
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  #dropdown-menu {
+    left: -2rem;
+    width: calc(100% + 4rem);
+    border: 1px solid var(--gray);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    height: calc(100vh - 12rem);
+    overflow-y: auto;
+  }
+
+  #dropdown-menu .options-container .options a {
+    margin-bottom: 0;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 1rem;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: 0;
+  }
+
+  .visible-mobile {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+
+  .options-container .options a:last-child {
+    margin-bottom: 20px;
+  }
+
+  .btns-mobile {
+    display: flex;
+    height: 88px;
+    width: 100%;
+    background-color: var(--light-gray);
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--gray);
+    gap: 1rem;
+  }
+
+  .menu-open {
+    grid-template-columns: 1fr;
+    top: 150px;
+  }
+
+  /* JavaScript only */
+  .nav-mobile {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .nav-mobile li {
+    border-bottom: 1px solid var(--gray);
+    padding-block: 16px;
+    margin-inline: 16px;
+  }
+
+  .nav-mobile li:first-child {
+    margin-top: 24px;
+  }
+
+  .nav-mobile li:last-child {
+    border: none;
+  }
+
+  .dropdown-mobile {
+    display: flex !important;
+    justify-content: space-between;
+  }
+}
